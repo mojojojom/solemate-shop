@@ -641,6 +641,13 @@ ul
         height: 100%;
     }
 }
+.w
+{
+    &-100
+    {
+        width: 100%;
+    }
+}
 
 
 
@@ -727,6 +734,7 @@ header
             font-family: $primary-font;
             color: $primary;
             transition: all ease-in-out 300ms;
+            font-size: 1rem;
             &:hover,&.active
             {
                 color: $secondary;
@@ -751,9 +759,88 @@ header
                     gap: 1rem;
                 }
             }
+            &-separator
+            {
+                color: $gray;
+                font-size: 1.3rem;
+            }
         }
     }
 }
 
 
 // FOOTER
+.footer__
+{
+    &main
+    {
+        &-wrap
+        {
+            padding: 50px 0;
+        }
+    }
+    &logo
+    {
+        font-size: 1.8rem;
+        font-family: $primary-font;
+        color: $secondary;
+        &-sub
+        {
+            color: $text;
+            font-family: $secondary-font;
+            font-size: 1rem;
+        }
+    }
+    &socials
+    {
+        color: $primary;
+        height: 35px;
+        width: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $snow;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        transition: all ease-in-out 300ms;
+        &:hover
+        {
+            background-color: $secondary;
+            color: $light;
+        }
+        &-wrap
+        {
+            margin-top: 1.5rem;
+            ul
+            {
+                gap: 10px;
+            }
+        }
+    }
+    &heading
+    {
+        color: $primary;
+        font-family: $secondary-font;
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+    &links
+    {
+        color: $text;
+        font-family: $secondary-font;
+        font-size: 1rem;
+        transition: all ease-in-out 300ms;
+        &:hover
+        {
+            color: $secondary;
+        }
+    }
+    &lists
+    {
+        li
+        {
+            margin-bottom: 0.3rem;
+        }
+    }
+}
