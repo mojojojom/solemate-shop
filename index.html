@@ -19,7 +19,7 @@
     <body>
         
         <!-- HEADER / NAV -->
-        <header>
+        <header id="main_header">
             <div class="container">
                 <nav class="py-4 nav__main-wrap">
                     <div class="nav__logo-wrap">
@@ -979,6 +979,27 @@
             })
 
         })
+
+        // SCROLL
+        var prevScrollpos = window.pageYOffset;
+        $(window).on('scroll', function() {
+            var header = $('#main_header');
+            var currentScrollPos = window.pageYOffset;
+
+            if($(this).scrollTop() > 100) {
+                header.addClass('scrolled');
+            } else {
+                header.removeClass('scrolled');
+            }
+
+            if (prevScrollpos > currentScrollPos) {
+                header.removeClass('header-hidden');
+            } else {
+                header.addClass('header-hidden');
+            }
+            prevScrollpos = currentScrollPos;
+        });
+
     })
 
 
